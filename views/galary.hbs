@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headers}}
+</head>
+
+<body>
+    {{>navbar data=details}}
+
+    {{!-- Galary section --}}
+    <section id="galary_section" class="py-20">
+        <div class="container">
+            <h1 class="text-center text-secondary">All Photoes</h1>
+
+            <div class="row mt-5">
+                {{!-- first services col --}}
+                {{#each galary}}
+                <div class="col-md-4">
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="container text-center py-3">
+                               <h5>{{this.imgName}}</h5>
+                            </div>
+                            <div>
+                                 <img src="{{this.imgUrl}}" style="height:170px">
+                            </div>
+
+                            {{!-- <a href="{{this.link}}">{{this.linkText}}</a>
+                            <a href="#!" class="ml-3">Support</a> --}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+   {{!-- footer section --}}
+    {{>footer}}
+
+</body>
+
+</html>

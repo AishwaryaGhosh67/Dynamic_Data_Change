@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headers}}
+</head>
+
+<body>
+    {{>navbar data=details}}
+    {{>slider slides=slides}}
+
+
+    {{!-- services section --}}
+
+    <section id="services_section" class="py-4">
+        <div class="container">
+            <h1 class="text-center text-secondary">Services that we provide</h1>
+
+            <div class="row mt-5">
+                {{!-- first services col --}}
+                {{#each services}}
+                <div class="col-md-4">
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="container text-center py-3 text-secondary">
+                                <i class="{{this.icon}} service_icon"></i>
+                            </div>
+
+                            <h4 class="card-title">{{this.title}}</h4>
+                            <p>{{this.desc}}</p>
+                            <a href="{{this.link}}">{{this.linkText}}</a>
+                            <a href="#!" class="ml-3">Support</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    {{!-- Babber2 section --}}
+
+    <section class="banner2_section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center pt-5">
+                    {{!-- left side --}}
+                    <h3>Learn Technology easy and Fuously</h3>
+                    <p>Data structure, Machine learning, Artificial Inteligence, Cybersecurity, Cloud computing and
+                        other top technologies</p>
+
+                    <button class="btn btn-primary">Learn here</button>
+                </div>
+                <div class="col md 6 text-center">
+                    {{!-- right side --}}
+                    <img src="/static/images/baner1.jpg" style="height:250px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{!-- Babber3 section --}}
+
+    <section class="banner2_section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col md 6 text-center">
+                    {{!-- left side --}}
+                    <img src="/static/images/baner2.png" style="height:250px" class="img-fluid">
+                </div>
+                <div class="col-md-6 text-center pt-3">
+                    {{!-- right side --}}
+                    <h3>Learn about IT industry</h3>
+                    <p>The information technology (I.T.) industry in India comprises information technology services and
+                        business process outsourcing. The share of the IT-BPM sector in the GDP of India is 7.4% in FY
+                        2022. The IT and BPM industries' revenue is estimated at US$ 245 billion in FY 2023.</p>
+
+                    <button class="btn btn-primary">Learn here</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    {{!-- contect us section --}}
+
+    <section id="contect_us_section" class="py-4 background1">
+        <div class="container">
+            <h3 class="text-center text-muted" style="color: burlywood;">Contect Us</h3>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <form action="/process-contect-form" method="post">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Your Email address</label>
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contectNumber" class="form-label">Contect Number</label>
+                            <input name="phone" type="number" class="form-control" id="contectNumber">
+                        </div>
+                        <div class="form-floating my-2">
+                            <textarea name="query" style="height: 250px;" class="form-control"
+                                placeholder="Enter Your query here" id="queryField"></textarea>
+                            <label for="queryField">Your query</label>
+                        </div>
+                        <div class="container text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    {{!-- About section --}}
+
+    <section id="about_section" class="sbout_section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>About this side</h3>
+                    <p>
+                        This section of a dynamic website serves as a concise narrative, offering visitors an insight
+                        into the website's purpose, mission, and values. It typically encapsulates the essence of the
+                        organization, company, or individual behind the site, outlining their history, achievements, and
+                        aspirations. Through engaging storytelling and relevant information, the About section aims to
+                        establish credibility, foster trust, and connect with the audience on a personal level. Whether
+                        it's highlighting key team members, showcasing unique accomplishments, or articulating future
+                        goals, this section acts as a digital handshake, inviting users to explore further and engage
+                        with the website's offerings.
+                    </p>
+                    <button class="btn btn-success">Contect Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{!-- footer section --}}
+    {{>footer}}
+
+</body>
+
+</html>
